@@ -1,4 +1,4 @@
-import ServiceTable from "@/components/table/ServiceTable";
+import ServiceTable from "@/components/table/QuizzesTable";
 import DashboardLayout from "@/layouts/Admin";
 import React from "react";
 

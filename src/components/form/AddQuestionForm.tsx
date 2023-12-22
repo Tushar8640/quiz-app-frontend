@@ -6,13 +6,14 @@ import Swal from "sweetalert2";
 import { useRouter } from "next/router";
 import {
   useAddCategoryMutation,
+  useAddQuestionsMutation,
   useAddQuizeMutation,
 } from "@/redux/features/quizes/quizeApi";
 
-const AddQuizForm = () => {
+const AddQuestionForm = () => {
   const { user } = useAppSelector((state) => state.auth);
 
-  const [addQuiz, { data, isError, isSuccess }] = useAddQuizeMutation();
+  const [addQuestion, { data, isError, isSuccess }] = useAddQuestionsMutation();
 
   const [addCategory] = useAddCategoryMutation();
   // Initialize state to hold form input values
@@ -24,7 +25,11 @@ const AddQuizForm = () => {
   // Handle form submission
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    addQuiz({ title, categoryId: "1c33c649-c877-44f1-9b77-b6d1142f4013" });
+    addQuestion({
+      question_text: title,
+      quizId: "a9371801-247c-48b5-bd9e-21da5d4a9e0d",
+      marks: 1,
+    });
   };
 
   const handleCatSubmit = (e: FormEvent) => {
@@ -43,17 +48,16 @@ const AddQuizForm = () => {
 
     if (data?.success && data?.data) {
       Swal.fire("Congratulations!", `Service Added successfully!`, "success");
-      router.push("/dashboard/quizzes");
     }
   }, [isSuccess, isError, data, router]);
 
   return (
     <div className="w-10/12 mx-auto mt-4">
       <h1 className="text-3xl font-semibold text-center mb-3 font-serif">
-        Add Quiz
+        Add Question
       </h1>
       <form
-        onSubmit={handleCatSubmit}
+        onSubmit={handleSubmit}
         className="px-8 py-8 bg-gray-200 rounded my-4"
       >
         <div className="grid grid-cols-2 items-center gap-2 w-full my-2">
@@ -63,8 +67,8 @@ const AddQuizForm = () => {
               type="text"
               id="title"
               name="title"
-              value={categoryTitle}
-              onChange={(e) => setCategoryTitle(e.target.value)}
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
               required
               className="rounded"
             />
@@ -73,7 +77,7 @@ const AddQuizForm = () => {
 
         <div className="flex">
           <Button className="mt-2" type="submit">
-            Add Category
+            Add Question
           </Button>
         </div>
       </form>
@@ -102,4 +106,4 @@ const AddQuizForm = () => {
     </div>
   );
 };
-export default AddQuizForm;
+export default AddQuestionForm;

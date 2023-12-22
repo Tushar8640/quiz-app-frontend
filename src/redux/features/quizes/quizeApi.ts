@@ -49,7 +49,21 @@ export const quizeApi = api.injectEndpoints({
       }),
       invalidatesTags: ["Quizzes"],
     }),
+    addQuestions: builder.mutation({
+      query: (data) => ({
+        url: `/questions`,
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["Quizzes"],
+    }),
   }),
 });
 
-export const { useAddQuizeMutation,useGetQuizzesQuery,useAddCategoryMutation } = quizeApi;
+export const {
+  useAddQuestionsMutation,
+  useAddQuizeMutation,
+  useGetQuizzesQuery,
+  useAddCategoryMutation,
+  useGetSingleQuizeQuery,
+} = quizeApi;
