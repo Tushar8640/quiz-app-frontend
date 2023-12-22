@@ -15,12 +15,12 @@ export const authApi = api.injectEndpoints({
           localStorage.setItem(
             "auth",
             JSON.stringify({
-              token: result?.data?.data.accessToken,
+              token: result?.data?.token,
             })
           );
           dispatch(
             userLoggedIn({
-              token: result?.data?.data.accessToken,
+              token: result?.data?.token,
             })
           );
         } catch (err) {

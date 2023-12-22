@@ -8,7 +8,7 @@ import {useAddToCartMutation} from "@/redux/features/cart/cartApi";
 import Swal from "sweetalert2";
 import {useAppSelector} from "@/redux/hooks";
 import {useRouter} from "next/router";
-import {useAddReviewsMutation, useGetReviewsQuery, useGetSingleServiceQuery} from "@/redux/features/services/serviceApi";
+import {useAddReviewsMutation, useGetReviewsQuery, useGetSingleServiceQuery} from "@/redux/features/quizes/quizeApi";
 import {Input} from "../ui/input";
 import {IReviewRating} from "@/interfaces/service";
 import {IUser} from "@/interfaces/user";

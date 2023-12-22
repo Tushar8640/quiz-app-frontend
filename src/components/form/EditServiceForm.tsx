@@ -4,7 +4,7 @@ import {Button} from "../ui/button";
 import Swal from "sweetalert2";
 import {IServiceProps} from "@/interfaces/service";
 import {useRouter} from "next/router";
-import {useUpdateServiceMutation} from "@/redux/features/services/serviceApi";
+import {useUpdateServiceMutation} from "@/redux/features/quizes/quizeApi";
 import {Select} from "@radix-ui/react-select";
 import {Option} from "lucide-react";
 

@@ -4,11 +4,11 @@ import {Button} from "../ui/button";
 import {useAppSelector} from "@/redux/hooks";
 import Swal from "sweetalert2";
 import {useRouter} from "next/router";
-import {useAddServiceMutation} from "@/redux/features/services/serviceApi";
+import { useAddQuizeMutation } from "@/redux/features/quizes/quizeApi";
 
 const AddServiceForm = () => {
   const {user} = useAppSelector((state) => state.auth);
-  const [addService, {data, isError, isSuccess}] = useAddServiceMutation();
+  const [addService, {data, isError, isSuccess}] = useAddQuizeMutation();
   // Initialize state to hold form input values
   const [formData, setFormData] = useState({
     title: "",

@@ -14,7 +14,7 @@ import {DataTablePagination} from "./DataTablePagination";
 import {ChevronDownIcon} from "@radix-ui/react-icons";
 
 import TableAction from "./TableAction";
-import {useGetServicesQuery} from "@/redux/features/services/serviceApi";
+import {useGetServicesQuery} from "@/redux/features/quizes/quizeApi";
 import {IService} from "@/interfaces/service";
 //defining table column
 export const columns: ColumnDef<IService>[] = [

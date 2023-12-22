@@ -19,7 +19,7 @@ export const api = createApi({
     },
   }),
   tagTypes: [
-    "Services",
+    "Quizzes",
     "singleService",
     "cart",
     "faq",

@@ -4,7 +4,7 @@ import {Button} from "../ui/button";
 import {useAppSelector} from "@/redux/hooks";
 import Swal from "sweetalert2";
 import {useRouter} from "next/router";
-import {useAddServiceMutation} from "@/redux/features/services/serviceApi";
+import {useAddServiceMutation} from "@/redux/features/quizes/quizeApi";
 import {useAddFeedbackMutation} from "@/redux/features/feedback/feedback";
 
 const FeedBackForm = () => {

@@ -20,8 +20,11 @@ export const filterSlice = createSlice({
     changedPath: (state, action) => {
       state.path = action.payload;
     },
+    pathChange: (state, action) => {
+      state.path = action.payload;
+    },
   },
 });
 
-export const { searched, changedPath } = filterSlice.actions;
+export const { searched, changedPath ,pathChange} = filterSlice.actions;
 export default filterSlice.reducer;

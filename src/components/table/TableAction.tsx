@@ -4,7 +4,7 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, 
 import {Button} from "../ui/button";
 import {DotsHorizontalIcon} from "@radix-ui/react-icons";
 import Link from "next/link";
-import {useDeleteServiceMutation} from "@/redux/features/services/serviceApi";
+import {useDeleteServiceMutation} from "@/redux/features/quizes/quizeApi";
 
 //
 export type TableProps = {

@@ -40,7 +40,6 @@ const LoginForm = () => {
         email,
         password,
       });
-    
     } else {
       Swal.fire("Sorry!", `Please fill up all required fields`, "info");
     }
@@ -49,7 +48,7 @@ const LoginForm = () => {
     if (isError || error) {
       setErrorMessage((error as CustomError)?.data?.message);
     } else {
-      dispatch(userLoggedIn({ token: data?.accessToken }));
+      dispatch(userLoggedIn({ token: data?.token }));
     }
   }, [data, error, isError]);
 
@@ -59,6 +58,7 @@ const LoginForm = () => {
     }
   }, [data]);
 
+  console.log(data, error);
   return (
     <div className=" flex flex-col justify-center items-center mx-auto px-2 mt-5 md:mt-0 w-3/5">
       {/* login form  */}
@@ -122,8 +122,6 @@ const LoginForm = () => {
         >
           Quick Sign up here
         </Link>
-    
-        
       </p>
     </div>
   );
