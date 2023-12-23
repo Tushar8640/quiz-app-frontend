@@ -53,16 +53,14 @@ const AddQuestionForm = () => {
 
   return (
     <div className="w-10/12 mx-auto mt-4">
-      <h1 className="text-3xl font-semibold text-center mb-3 font-serif">
-        Add Question
-      </h1>
+   
       <form
         onSubmit={handleSubmit}
         className="px-8 py-8 bg-gray-200 rounded my-4"
       >
         <div className="grid grid-cols-2 items-center gap-2 w-full my-2">
           <div className="flex flex-col">
-            <label htmlFor="title">Title</label>
+            <label htmlFor="title">Question: </label>
             <Input
               type="text"
               id="title"
@@ -81,28 +79,7 @@ const AddQuestionForm = () => {
           </Button>
         </div>
       </form>
-      <form onSubmit={handleSubmit} className="px-8 py-8 bg-gray-200 rounded">
-        <div className="grid grid-cols-2 items-center gap-2 w-full my-2">
-          <div className="flex flex-col">
-            <label htmlFor="title">Title</label>
-            <Input
-              type="text"
-              id="title"
-              name="title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              required
-              className="rounded"
-            />
-          </div>
-        </div>
-
-        <div className="flex">
-          <Button className="mt-2" type="submit">
-            Add Quiz
-          </Button>
-        </div>
-      </form>
+  
     </div>
   );
 };

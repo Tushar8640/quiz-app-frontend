@@ -59,7 +59,7 @@ const Sidebar = () => {
                 active === "services" ? "link-active" : "link-hover"
               }`}
             >
-              <Link href="/dashboard/Quizzes" className="link-styles">
+              <Link href="/dashboard/quizzes" className="link-styles">
                 Quizzes
               </Link>
             </li>
